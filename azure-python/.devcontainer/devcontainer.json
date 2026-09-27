@@ -1,0 +1,21 @@
+{
+  "name": "Azure Functions (Python 3)",
+	"image": "python:3.12.14-slim-trixie",
+  "mounts": [
+    "source=${localEnv:HOME}/.ssh,target=/root/.ssh,type=bind,readonly"
+  ],
+	"customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-azuretools.vscode-azurefunctions",
+        "ms-python.python"
+      ]
+    }
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/azure-cli:1":{
+      "version": "latest"
+    },
+    "ghcr.io/devcontainers/features/git:1": {}
+  }
+}
